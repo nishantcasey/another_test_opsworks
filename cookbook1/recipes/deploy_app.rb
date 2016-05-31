@@ -9,6 +9,8 @@
 
 include_recipe 'deploy'
 
+Chef::Log.info("Skipping deploy::php-undeploy application #{application} as it is not an PHP app")
+
 node[:deploy].each do |application, deploy|
     Chef::Log.info("Skipping deploy::php-undeploy application #{application} as it is not an PHP app")
 end
